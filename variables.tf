@@ -12,7 +12,7 @@ EOT
   type = map(object({
     log_analytics_workspace_id = string
     name                       = string
-    lookback_date              = optional(string, "01/01/1970 00:00:00")
+    lookback_date              = optional(string) # Default: "01/01/1970 00:00:00"
     tenant_id                  = optional(string)
   }))
 }
