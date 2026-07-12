@@ -1,3 +1,7 @@
+output "sentinel_data_connector_threat_intelligences_id" {
+  description = "Map of id values across all sentinel_data_connector_threat_intelligences, keyed the same as var.sentinel_data_connector_threat_intelligences"
+  value       = { for k, v in azurerm_sentinel_data_connector_threat_intelligence.sentinel_data_connector_threat_intelligences : k => v.id }
+}
 output "sentinel_data_connector_threat_intelligences_log_analytics_workspace_id" {
   description = "Map of log_analytics_workspace_id values across all sentinel_data_connector_threat_intelligences, keyed the same as var.sentinel_data_connector_threat_intelligences"
   value       = { for k, v in azurerm_sentinel_data_connector_threat_intelligence.sentinel_data_connector_threat_intelligences : k => v.log_analytics_workspace_id }
